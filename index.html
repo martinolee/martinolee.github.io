@@ -1,158 +1,1220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Swift Developer's Home" type="application/atom+xml">
 
-    <meta name="author" content="martinolee">
-
-
-
-
-    <meta name="keywords" content="swift, ios, swiftui, git">
-
-
-<title>Swift Developer&#39;s Home</title>
+<link rel="stylesheet" href="/css/main.css">
 
 
-
-    <link rel="icon" href="/favicon.ico">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
 
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/css/style.css">
-    
+  <meta name="keywords" content="swift, ios, swiftui, git">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Swift Developer&#39;s Home">
+<meta property="og:url" content="https:&#x2F;&#x2F;martinolee.github.io&#x2F;index.html">
+<meta property="og:site_name" content="Swift Developer&#39;s Home">
+<meta property="og:locale" content="en">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://martinolee.github.io/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Swift Developer's Home</title>
+  
 
 
 
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/js/script.js"></script>
-    
-    <script src="/js/tocbot.min.js"></script>
-    
 
 
 
-    
-    
-        
-    
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/">Soohan&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
 
-        </div>
-    </nav>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Swift Developer's Home</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
 
     
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/">Soohan&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/archives">Posts</a>
-                
-                    <a class="menu-item" href="/category">Categories</a>
-                
-                    <a class="menu-item" href="/tag">Tags</a>
-                
-                    <a class="menu-item" href="/about">About</a>
-                
-            </div>
-        </div>
-    </nav>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-        <div class="main">
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
             
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/archives"><img src="/image/avatar.JPG"></a>
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/12/03-Swift-Post/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/03-Swift-Post/" class="post-title-link" itemprop="url">03 Swift Post</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-12-03 18:56:59" itemprop="dateCreated datePublished" datetime="2019-12-03T18:56:59+09:00">2019-12-03</time>
+            </span>
+
+          
+
         </div>
-        <div class="nickname">Soohan Lee</div>
-        <div class="description"><p>The people who are crazy enough to think they can change the world, are the ones who do</p>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/25-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/25-Swift-Task/" class="post-title-link" itemprop="url">25 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-27 10:17:27" itemprop="dateCreated datePublished" datetime="2019-11-27T10:17:27+09:00">2019-11-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:22:17" itemprop="dateModified" datetime="2019-12-03T19:22:17+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Present-View-Example"><a href="#Present-View-Example" class="headerlink" title="Present View Example"></a>Present View Example</h1><br>
+
+<h3 id="ViewController"><a href="#ViewController" class="headerlink" title="ViewController"></a>ViewController</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> label = <span class="type">UILabel</span>()</span><br><span class="line">    <span class="keyword">let</span> button = <span class="type">UIButton</span>()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> number = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">        </span><br><span class="line">        view.backgroundColor = .random()</span><br><span class="line">        </span><br><span class="line">        setupLabel()</span><br><span class="line">        setupButton()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">setupLabel</span><span class="params">()</span></span> &#123;</span><br><span class="line">        label.frame.size = <span class="type">CGSize</span>(width: view.frame.width, height: <span class="number">100</span>)</span><br><span class="line">        label.center = view.center</span><br><span class="line">        label.text = <span class="string">"\(number)"</span></span><br><span class="line">        label.textColor = .random()</span><br><span class="line">        label.textAlignment = .center</span><br><span class="line">        label.font = <span class="type">UIFont</span>(name: <span class="string">"Arial"</span>, size: <span class="number">90</span>)</span><br><span class="line">      </span><br><span class="line">        view.addSubview(label)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">setupButton</span><span class="params">()</span></span> &#123;</span><br><span class="line">        button.frame = <span class="type">CGRect</span>(x: <span class="number">0</span>, y: view.bounds.height - <span class="number">200</span>,</span><br><span class="line">                              width: view.bounds.width, height: <span class="number">100</span>)</span><br><span class="line">        button.setTitle(<span class="string">"Go to Next View"</span>, <span class="keyword">for</span>: .normal)</span><br><span class="line">        button.setTitleColor(.random(), <span class="keyword">for</span>: .normal)</span><br><span class="line">        button.titleLabel?.font = <span class="type">UIFont</span>(name: <span class="string">"Arial"</span>, size: <span class="number">20</span>)</span><br><span class="line">        button.titleLabel?.lineBreakMode = <span class="type">NSLineBreakMode</span>.byWordWrapping</span><br><span class="line">        button.titleLabel?.textAlignment = <span class="type">NSTextAlignment</span>.center</span><br><span class="line">        button.addTarget(<span class="keyword">self</span>, action: #selector(didTapButton(<span class="number">_</span>:)), <span class="keyword">for</span>: .touchUpInside)</span><br><span class="line">      </span><br><span class="line">        view.addSubview(button)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@objc</span></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">didTapButton</span><span class="params">(<span class="number">_</span> sender: UIButton)</span></span> &#123;</span><br><span class="line">        <span class="keyword">let</span> nextVC = <span class="type">NextViewController</span>()</span><br><span class="line">        nextVC.modalPresentationStyle = .fullScreen</span><br><span class="line">        nextVC.modalTransitionStyle = .flipHorizontal</span><br><span class="line">        </span><br><span class="line">        number += <span class="number">1</span></span><br><span class="line">        present(nextVC, animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="NextViewController"><a href="#NextViewController" class="headerlink" title="NextViewController"></a>NextViewController</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NextViewController</span>: <span class="title">UIViewController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">      </span><br><span class="line">        view.backgroundColor = .random()</span><br><span class="line">        </span><br><span class="line">        setupButton()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewWillAppear</span><span class="params">(<span class="number">_</span> animated: Bool)</span></span> &#123;</span><br><span class="line">        setupLabel()</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">setupLabel</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">let</span> label = <span class="type">UILabel</span>()</span><br><span class="line">      </span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> vc = presentingViewController <span class="keyword">as</span>? <span class="type">ViewController</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">        </span><br><span class="line">        label.frame.size = <span class="type">CGSize</span>(width: view.frame.width, height: <span class="number">100</span>)</span><br><span class="line">        label.center = view.center</span><br><span class="line">        label.text = <span class="string">"\(vc.number)"</span></span><br><span class="line">        label.textColor = .random()</span><br><span class="line">        label.textAlignment = .center</span><br><span class="line">        label.font = <span class="type">UIFont</span>(name: <span class="string">"Arial"</span>, size: <span class="number">90</span>)</span><br><span class="line">        </span><br><span class="line">        view.addSubview(label)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">setupButton</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">let</span> button = <span class="type">UIButton</span>()</span><br><span class="line">      </span><br><span class="line">        button.frame = <span class="type">CGRect</span>(x: <span class="number">0</span>, y: view.bounds.height - <span class="number">200</span>, width: view.bounds.width, height: <span class="number">100</span>)</span><br><span class="line">        button.setTitle(<span class="string">"Back to Pervious View"</span>, <span class="keyword">for</span>: .normal)</span><br><span class="line">        button.setTitleColor(.random(), <span class="keyword">for</span>: .normal)</span><br><span class="line">        button.titleLabel?.font = <span class="type">UIFont</span>(name: <span class="string">"Arial"</span>, size: <span class="number">20</span>)</span><br><span class="line">        button.titleLabel?.lineBreakMode = <span class="type">NSLineBreakMode</span>.byWordWrapping</span><br><span class="line">        button.titleLabel?.textAlignment = <span class="type">NSTextAlignment</span>.center</span><br><span class="line">        button.addTarget(<span class="keyword">self</span>, action: #selector(didTapButton(<span class="number">_</span>:)), <span class="keyword">for</span>: .touchUpInside)</span><br><span class="line">      </span><br><span class="line">        view.addSubview(button)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@objc</span></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">didTapButton</span><span class="params">(<span class="number">_</span> sender: UIButton)</span></span> &#123;</span><br><span class="line">        <span class="keyword">guard</span> <span class="keyword">let</span> vc = presentingViewController <span class="keyword">as</span>? <span class="type">ViewController</span> <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</span><br><span class="line">      </span><br><span class="line">        vc.number += <span class="number">1</span></span><br><span class="line">        vc.label.text = <span class="string">"\(vc.number)"</span></span><br><span class="line">        vc.label.textColor = .random()</span><br><span class="line">        vc.button.setTitleColor(.random(), <span class="keyword">for</span>: .normal)</span><br><span class="line">        vc.view.backgroundColor = .random()</span><br><span class="line">      </span><br><span class="line">        dismiss(animated: <span class="literal">true</span>, completion: <span class="literal">nil</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>After read these codes you might have a question about .random(), because UIColor has no random method. I’ll let you know how to bring random method in your project. It’ll make your app more colorful.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">CGFloat</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">random</span><span class="params">()</span></span> -&gt; <span class="type">CGFloat</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">CGFloat</span>(arc4random()) / <span class="type">CGFloat</span>(<span class="type">UInt32</span>.<span class="built_in">max</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">UIColor</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="function"><span class="keyword">func</span> <span class="title">random</span><span class="params">()</span></span> -&gt; <span class="type">UIColor</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">UIColor</span>(red:   .random(),</span><br><span class="line">                       green: .random(),</span><br><span class="line">                       blue:  .random(),</span><br><span class="line">                       alpha: <span class="number">1.0</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p>here is the result of these codes</p>
+<img src="/2019/11/25-Swift-Task/Task.mp4" alt="Example Video" style="zoom:33%;">
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/22-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22-Swift-Task/" class="post-title-link" itemprop="url">22 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-25 09:57:26" itemprop="dateCreated datePublished" datetime="2019-11-25T09:57:26+09:00">2019-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:22:27" itemprop="dateModified" datetime="2019-12-03T19:22:27+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">plusAllDigits</span><span class="params">(<span class="number">_</span> number: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> digit <span class="keyword">in</span> <span class="type">String</span>(number) &#123; sum += <span class="type">Int</span>(<span class="type">String</span>(digit))! &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">plusAllDigits(<span class="number">13413</span>)</span><br><span class="line"><span class="comment">// 12</span></span><br><span class="line">plusAllDigits(<span class="number">100000</span>)</span><br><span class="line"><span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isHarshad</span><span class="params">(<span class="number">_</span> number: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> sum = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> digit <span class="keyword">in</span> <span class="type">String</span>(number) &#123; sum += <span class="type">Int</span>(<span class="type">String</span>(digit))! &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> number % sum == <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">isHarshad(<span class="number">9</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line">isHarshad(<span class="number">777</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line">isHarshad(<span class="number">123</span>)</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/21-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/21-Swift-Task/" class="post-title-link" itemprop="url">21 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-25 09:57:18" itemprop="dateCreated datePublished" datetime="2019-11-25T09:57:18+09:00">2019-11-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:22:37" itemprop="dateModified" datetime="2019-12-03T19:22:37+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">plusOne</span><span class="params">(to number: Int)</span></span> -&gt; <span class="type">Int</span> &#123; number * (number + <span class="number">1</span>) / <span class="number">2</span> &#125;</span><br><span class="line"></span><br><span class="line">plusOne(to: <span class="number">10</span>)</span><br><span class="line"><span class="comment">// 55</span></span><br><span class="line">plusOne(to: <span class="number">100</span>)</span><br><span class="line"><span class="comment">// 5050</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ifNumberHasThreeSixNinePrintAsteriskFromOne</span><span class="params">(to here: UInt)</span></span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> <span class="number">1</span> ... here &#123;</span><br><span class="line">        <span class="keyword">let</span> hasThreeSixNine = <span class="type">String</span>(number).<span class="built_in">contains</span>(<span class="string">"3"</span>) || <span class="type">String</span>(number).<span class="built_in">contains</span>(<span class="string">"6"</span>) || <span class="type">String</span>(number).<span class="built_in">contains</span>(<span class="string">"9"</span>)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> hasThreeSixNine &#123; <span class="built_in">print</span>(<span class="string">"*"</span>, terminator: <span class="string">" "</span>) &#125; <span class="keyword">else</span> &#123; <span class="built_in">print</span>(number, terminator: <span class="string">" "</span>) &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">""</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ifNumberHasThreeSixNinePrintAsteriskFromOne(to: <span class="number">10</span>)</span><br><span class="line"><span class="comment">// 1 2 * 4 5 * 7 8 * 10 </span></span><br><span class="line">ifNumberHasThreeSixNinePrintAsteriskFromOne(to: <span class="number">23</span>)</span><br><span class="line"><span class="comment">// 1 2 * 4 5 * 7 8 * 10 11 12 * 14 15 * 17 18 * 20 21 22 *</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getGreastCommonDivisorAndLeastCommonMultiple</span><span class="params">(firstNumber: Int, secondNumber: Int)</span></span> -&gt; <span class="type">Dictionary</span>&lt;<span class="type">String</span>, <span class="type">Int</span>&gt; &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> greastCommonDivisorAndLeastCommonMultiple = <span class="type">Dictionary</span>&lt;<span class="type">String</span>, <span class="type">Int</span>&gt;()</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getGreastCommonDivisor</span><span class="params">(<span class="number">_</span> m: Int, <span class="number">_</span> n: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> a: <span class="type">Int</span> = <span class="number">0</span></span><br><span class="line">        <span class="keyword">var</span> b: <span class="type">Int</span> = <span class="built_in">max</span>(m, n)</span><br><span class="line">        <span class="keyword">var</span> r: <span class="type">Int</span> = <span class="built_in">min</span>(m, n)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> r != <span class="number">0</span> &#123;</span><br><span class="line">            a = b</span><br><span class="line">            b = r</span><br><span class="line">            r = a % b</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getLeastCommonMultiple</span><span class="params">(<span class="number">_</span> m: Int, <span class="number">_</span> n: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        m * n / getGreastCommonDivisor(m, n)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    greastCommonDivisorAndLeastCommonMultiple.updateValue(getGreastCommonDivisor(firstNumber, secondNumber), forKey: <span class="string">"Greatest Common Divisor"</span>)</span><br><span class="line">    greastCommonDivisorAndLeastCommonMultiple.updateValue(getLeastCommonMultiple(firstNumber, secondNumber), forKey: <span class="string">"Least Common Multiple"</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> greastCommonDivisorAndLeastCommonMultiple</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getGreastCommonDivisorAndLeastCommonMultiple(firstNumber: <span class="number">140</span>, secondNumber: <span class="number">72</span>)</span><br><span class="line"><span class="comment">// ["Greatest Common Divisor": 4, "Least Common Multiple": 2520]</span></span><br><span class="line">getGreastCommonDivisorAndLeastCommonMultiple(firstNumber: <span class="number">85</span>, secondNumber: <span class="number">500</span>)</span><br><span class="line"><span class="comment">//["Greatest Common Divisor": 5, "Least Common Multiple": 8500]</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/19-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/19-Swift-Task/" class="post-title-link" itemprop="url">19 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-19 19:25:08" itemprop="dateCreated datePublished" datetime="2019-11-19T19:25:08+09:00">2019-11-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:22:49" itemprop="dateModified" datetime="2019-12-03T19:22:49+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h1><br>
+
+<h3 id="Make-this-picture-to-a-class-with-inheritance"><a href="#Make-this-picture-to-a-class-with-inheritance" class="headerlink" title="Make this picture to a class with inheritance"></a>Make this picture to a class with inheritance</h3><p><img src="/2019/11/19-Swift-Task/Inheritance.png" alt="Inheritance"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> brain = <span class="literal">true</span></span><br><span class="line">    <span class="keyword">var</span> legs: <span class="type">Int</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(legs: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.legs = legs</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>: <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">init</span>(legs: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(legs: legs)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Pet</span>: <span class="title">Animal</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> fleas: <span class="type">Int</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(fleas: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.fleas = fleas</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(legs: <span class="number">4</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>: <span class="title">Pet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">init</span>(fleas: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(fleas: fleas)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span>: <span class="title">Pet</span> </span>&#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">init</span>(fleas: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(fleas: fleas)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> animal = <span class="type">Animal</span>(legs: <span class="number">0</span>)</span><br><span class="line">animal.brain</span><br><span class="line"><span class="comment">// ture</span></span><br><span class="line">animal.legs</span><br><span class="line"><span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> human = <span class="type">Human</span>(legs: <span class="number">2</span>)</span><br><span class="line">human.brain</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line">human.legs</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> pet = <span class="type">Pet</span>(fleas: <span class="number">0</span>)</span><br><span class="line">pet.brain</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line">pet.legs</span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line">pet.fleas</span><br><span class="line"><span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> dog = <span class="type">Dog</span>(fleas: <span class="number">8</span>)</span><br><span class="line">dog.brain</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line">dog.legs</span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line">dog.fleas</span><br><span class="line"><span class="comment">// 8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cat = <span class="type">Cat</span>(fleas: <span class="number">4</span>)</span><br><span class="line">cat.brain</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line">cat.legs</span><br><span class="line"><span class="comment">// 4</span></span><br><span class="line">cat.fleas</span><br><span class="line"><span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/18-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/18-Swift-Task/" class="post-title-link" itemprop="url">18 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-19 13:12:48" itemprop="dateCreated datePublished" datetime="2019-11-19T13:12:48+09:00">2019-11-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:23:07" itemprop="dateModified" datetime="2019-12-03T19:23:07+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Class"><a href="#Class" class="headerlink" title="Class"></a>Class</h1><br>
+
+<h3 id="Make-some-classes-related-about-real-life"><a href="#Make-some-classes-related-about-real-life" class="headerlink" title="Make some classes related about real life"></a>Make some classes related about real life</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> age: <span class="type">Int</span></span><br><span class="line">    <span class="keyword">var</span> weight: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">var</span> breed: <span class="type">String</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(name: <span class="type">String</span>, age: <span class="type">Int</span>, weight: <span class="type">Double</span>, breed: <span class="type">String</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.name = name</span><br><span class="line">        <span class="keyword">self</span>.age = age</span><br><span class="line">        <span class="keyword">self</span>.weight = weight</span><br><span class="line">        <span class="keyword">self</span>.breed = breed</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">bark</span><span class="params">(to someone: String)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"Bark to \(someone)"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">eat</span><span class="params">(<span class="number">_</span> food: String)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"Eat \(food)"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> goldenRetriever = <span class="type">Dog</span>(name: <span class="string">"Golden"</span>, age: <span class="number">2</span>, weight: <span class="number">10.2</span>, breed: <span class="string">"Golden Retriever"</span>)</span><br><span class="line"></span><br><span class="line">goldenRetriever.bark(to: <span class="string">"theif"</span>)</span><br><span class="line">goldenRetriever.eat(<span class="string">"dog food"</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> age: <span class="type">Int</span></span><br><span class="line">    <span class="keyword">var</span> school: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> grade: <span class="type">Int</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(name: <span class="type">String</span>, age: <span class="type">Int</span>, school: <span class="type">String</span>, grade: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.name = name</span><br><span class="line">        <span class="keyword">self</span>.age = age</span><br><span class="line">        <span class="keyword">self</span>.school = school</span><br><span class="line">        <span class="keyword">self</span>.grade = grade</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">study</span><span class="params">(about subject: String)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"Study about \(subject)"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">eat</span><span class="params">(<span class="number">_</span> food: String)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"eat \(food)"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">sleep</span><span class="params">(<span class="keyword">for</span> hour: Int)</span></span> &#123;</span><br><span class="line">        hour == <span class="number">1</span> ? <span class="built_in">print</span>(<span class="string">"sleep for an hour"</span>) : <span class="built_in">print</span>(<span class="string">"sleep for \(hour) hours"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> soohanlee = <span class="type">Student</span>(name: <span class="string">"Soohan Lee"</span>, age: <span class="number">19</span>, school: <span class="string">"JukJeon"</span>, grade: <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">soohanlee.study(about: <span class="string">"Swift"</span>)</span><br><span class="line">soohanlee.eat(<span class="string">"Gukbap"</span>)</span><br><span class="line">soohanlee.sleep(<span class="keyword">for</span>: <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Phone</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> model: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> price: <span class="type">Int</span></span><br><span class="line">    <span class="keyword">var</span> haveFaceID: <span class="type">Bool</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(model: <span class="type">String</span>, price: <span class="type">Int</span>, haveFaceID: <span class="type">Bool</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.model = model</span><br><span class="line">        <span class="keyword">self</span>.price = price</span><br><span class="line">        <span class="keyword">self</span>.haveFaceID = haveFaceID</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">call</span><span class="params">(to someone: String)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"call to \(someone)"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">text</span><span class="params">(to someone: String)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"text to \(someone)"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> iPhone4 = <span class="type">Phone</span>(model: <span class="string">"iPhone 4"</span>, price: <span class="number">9900000</span>, haveFaceID: <span class="literal">false</span>)</span><br><span class="line">iPhone4.call(to: <span class="string">"Mom"</span>)</span><br><span class="line">iPhone4.text(to: <span class="string">"Dad"</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">coffee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line">    <span class="keyword">var</span> price: <span class="type">Int</span></span><br><span class="line">    <span class="keyword">var</span> origin: <span class="type">String</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(name: <span class="type">String</span>, price: <span class="type">Int</span>, origin: <span class="type">String</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.name = name</span><br><span class="line">        <span class="keyword">self</span>.price = price</span><br><span class="line">        <span class="keyword">self</span>.origin = origin</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cafeLatte = coffee(name: <span class="string">"Cafe Latte"</span>, price: <span class="number">3000</span>, origin: <span class="string">"Ethiopia"</span>)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Make-Caculator-with-class"><a href="#Make-Caculator-with-class" class="headerlink" title="Make Caculator with class"></a>Make Caculator with class</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Calculator</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> value = <span class="number">0.0</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">add</span><span class="params">(<span class="number">_</span> number: Double)</span></span> &#123; value += number &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">subtract</span><span class="params">(<span class="number">_</span> number: Double)</span></span> &#123; value -= number &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">multiply</span><span class="params">(<span class="number">_</span> number: Double)</span></span> &#123; value *= number &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">divide</span><span class="params">(<span class="number">_</span> number: Double)</span></span> &#123; value /= number &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">reset</span><span class="params">()</span></span> &#123; value = <span class="number">0</span> &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getValue</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; value &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> calculator = <span class="type">Calculator</span>()</span><br><span class="line"></span><br><span class="line">calculator.add(<span class="number">10</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">calculator.add(<span class="number">5</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// 15</span></span><br><span class="line"></span><br><span class="line">calculator.subtract(<span class="number">9</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// 6</span></span><br><span class="line"></span><br><span class="line">calculator.subtract(<span class="number">10</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// -4</span></span><br><span class="line"></span><br><span class="line">calculator.multiply(<span class="number">4</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// -16</span></span><br><span class="line"></span><br><span class="line">calculator.multiply(-<span class="number">10</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// 160</span></span><br><span class="line"></span><br><span class="line">calculator.divide(<span class="number">10</span>)</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// 16</span></span><br><span class="line"></span><br><span class="line">calculator.reset()</span><br><span class="line">calculator.getValue()</span><br><span class="line"><span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Make-some-formulas-with-class"><a href="#Make-some-formulas-with-class" class="headerlink" title="Make some formulas with class"></a>Make some formulas with class</h3><p><img src="/2019/11/18-Swift-Task/formula.png" alt="formulas"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Square</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> width: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> area: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> perimeter: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(width: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.width = width</span><br><span class="line">        <span class="keyword">self</span>.height = width</span><br><span class="line">        </span><br><span class="line">        area = width * height</span><br><span class="line">        </span><br><span class="line">        perimeter = <span class="number">4</span> * width</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getArea</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; area &#125;</span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getPerimeter</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; perimeter &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> square = <span class="type">Square</span>(width: <span class="number">13</span>)</span><br><span class="line">square.getArea()</span><br><span class="line"><span class="comment">// 169</span></span><br><span class="line">square.getPerimeter()</span><br><span class="line"><span class="comment">//52</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> width: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> area: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> perimeter: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(width: <span class="type">Double</span>, height: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.width = width</span><br><span class="line">        <span class="keyword">self</span>.height = height</span><br><span class="line">        </span><br><span class="line">        area = width * height</span><br><span class="line">        </span><br><span class="line">        perimeter = (<span class="number">2</span> * width) + (<span class="number">2</span> * height)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getArea</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; area &#125;</span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getPerimeter</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; perimeter &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> rectangle = <span class="type">Rectangle</span>(width: <span class="number">5</span>, height: <span class="number">12</span>)</span><br><span class="line">rectangle.getArea()</span><br><span class="line"><span class="comment">// 60</span></span><br><span class="line">rectangle.getPerimeter()</span><br><span class="line"><span class="comment">// 34</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Circle</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> radius: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> area: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> circumference: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(radius: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.radius = radius</span><br><span class="line">        </span><br><span class="line">        area = <span class="type">Double</span>.pi * pow(radius, <span class="number">2</span>)</span><br><span class="line">        </span><br><span class="line">        circumference = <span class="number">2</span> * <span class="type">Double</span>.pi * radius</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getArea</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; area &#125;</span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getcircumference</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; circumference &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> circle = <span class="type">Circle</span>(radius: <span class="number">6</span>)</span><br><span class="line">circle.getArea()</span><br><span class="line"><span class="comment">// 113.09733552923255</span></span><br><span class="line">circle.getcircumference()</span><br><span class="line"><span class="comment">// 37.69911184307752</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Triangle</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> width: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> area: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(width: <span class="type">Double</span>, height: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.width = width</span><br><span class="line">        <span class="keyword">self</span>.height = height</span><br><span class="line">        </span><br><span class="line">        area = width * height / <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getArea</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; area &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> triangle = <span class="type">Triangle</span>(width: <span class="number">3</span>, height: <span class="number">14</span>)</span><br><span class="line">triangle.getArea()</span><br><span class="line"><span class="comment">// 21</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Trapezoid</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> upperWidth: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> lowerWidth: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> area: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(upperWidth: <span class="type">Double</span>, lowerWidth: <span class="type">Double</span>, height: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.upperWidth = upperWidth</span><br><span class="line">        <span class="keyword">self</span>.lowerWidth = lowerWidth</span><br><span class="line">        <span class="keyword">self</span>.height = height</span><br><span class="line">        </span><br><span class="line">        area = <span class="number">0.5</span> * height * (upperWidth + lowerWidth)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getArea</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; area &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> trapezoid = <span class="type">Trapezoid</span>(upperWidth: <span class="number">3</span>, lowerWidth: <span class="number">2</span>, height: <span class="number">5</span>)</span><br><span class="line">trapezoid.getArea()</span><br><span class="line"><span class="comment">// 12.5</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cube</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> width: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> depth: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> volume: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(width: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.width = width</span><br><span class="line">        <span class="keyword">self</span>.height = width</span><br><span class="line">        <span class="keyword">self</span>.depth = width</span><br><span class="line">        </span><br><span class="line">        volume = width * height * depth</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getVolume</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; volume &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cube = <span class="type">Cube</span>(width: <span class="number">7</span>)</span><br><span class="line">cube.getVolume()</span><br><span class="line"><span class="comment">// 343</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RectangularSolid</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> width: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> depth: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> volume: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(width: <span class="type">Double</span>, height: <span class="type">Double</span>, depth: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.width = width</span><br><span class="line">        <span class="keyword">self</span>.height = height</span><br><span class="line">        <span class="keyword">self</span>.depth = depth</span><br><span class="line">        </span><br><span class="line">        volume = width * height * depth</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getVolume</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; volume &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> rectangularSolid = <span class="type">RectangularSolid</span>(width: <span class="number">3</span>, height: <span class="number">2</span>, depth: <span class="number">5</span>)</span><br><span class="line">rectangularSolid.getVolume()</span><br><span class="line"><span class="comment">// 30</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CircularCylinder</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> radius: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> volume: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(radius: <span class="type">Double</span>, height: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.radius = radius</span><br><span class="line">        <span class="keyword">self</span>.height = height</span><br><span class="line">        </span><br><span class="line">        volume = <span class="type">Double</span>.pi * pow(radius, <span class="number">2</span>) * height</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getVolume</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; volume &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> circularCylinder = <span class="type">CircularCylinder</span>(radius: <span class="number">3</span>, height: <span class="number">6</span>)</span><br><span class="line">circularCylinder.getVolume()</span><br><span class="line"><span class="comment">// 169.64600329384882</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sphere</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> radius: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> volume: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(radius: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.radius = radius</span><br><span class="line">        </span><br><span class="line">        volume = <span class="number">4</span> / <span class="number">3</span> * <span class="type">Double</span>.pi * pow(radius, <span class="number">3</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getVolume</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; volume &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sphere = <span class="type">Sphere</span>(radius: <span class="number">2</span>)</span><br><span class="line">sphere.getVolume()</span><br><span class="line"><span class="comment">// 33.510321638291124</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cone</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> height: <span class="type">Double</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> radius: <span class="type">Double</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">var</span> volume: <span class="type">Double</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">init</span>(height: <span class="type">Double</span>, radius: <span class="type">Double</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.height = height</span><br><span class="line">        <span class="keyword">self</span>.radius = radius</span><br><span class="line">        </span><br><span class="line">        volume = <span class="number">1</span> / <span class="number">3</span> * <span class="type">Double</span>.pi * pow(radius, <span class="number">2</span>) * height</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">getVolume</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123; volume &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cone = <span class="type">Cone</span>(height: <span class="number">2</span>, radius: <span class="number">3</span>)</span><br><span class="line">cone.getVolume()</span><br><span class="line"><span class="comment">// 18.84955592153876</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/15-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/15-Swift-Task/" class="post-title-link" itemprop="url">15 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-15 15:08:35" itemprop="dateCreated datePublished" datetime="2019-11-15T15:08:35+09:00">2019-11-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:21:44" itemprop="dateModified" datetime="2019-12-03T19:21:44+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Closure"><a href="#Closure" class="headerlink" title="Closure"></a>Closure</h1><br>
+
+<h3 id="Optimize-clousre"><a href="#Optimize-clousre" class="headerlink" title="Optimize clousre"></a>Optimize clousre</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> someClosure: (<span class="type">String</span>, <span class="type">String</span>) -&gt; <span class="type">Bool</span> = &#123; (s1: <span class="type">String</span>, s2: <span class="type">String</span>) -&gt; <span class="type">Bool</span> <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">let</span> isAscending: <span class="type">Bool</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> s1 &gt; s2 &#123;</span><br><span class="line">        isAscending = <span class="literal">true</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        isAscending = <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> isAscending</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> optimizedSomeClosure: (<span class="type">String</span>, <span class="type">String</span>) -&gt; <span class="type">Bool</span> = &#123; $<span class="number">0</span> &gt; $<span class="number">1</span> &#125;</span><br><span class="line"></span><br><span class="line">someClosure(<span class="string">"apple"</span>, <span class="string">"banana"</span>)</span><br><span class="line"><span class="comment">// false</span></span><br><span class="line">optimizedSomeClosure(<span class="string">"apple"</span>, <span class="string">"banana"</span>)</span><br><span class="line"><span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">someClosure(<span class="string">"banana"</span>, <span class="string">"apple"</span>)</span><br><span class="line"><span class="comment">// ture</span></span><br><span class="line">optimizedSomeClosure(<span class="string">"banana"</span>, <span class="string">"apple"</span>)</span><br><span class="line"><span class="comment">// ture</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> otherClosure: ([<span class="type">Int</span>]) -&gt; <span class="type">Int</span> = &#123; (values: [<span class="type">Int</span>]) -&gt; <span class="type">Int</span> <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">var</span> <span class="built_in">count</span>: <span class="type">Int</span> = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> <span class="number">_</span> <span class="keyword">in</span> values &#123;</span><br><span class="line">        <span class="built_in">count</span> += <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">count</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> optimizedOtherClosure: ([<span class="type">Int</span>]) -&gt; <span class="type">Int</span> = &#123; $<span class="number">0</span>.<span class="built_in">count</span> &#125;</span><br><span class="line"></span><br><span class="line">otherClosure([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">optimizedOtherClosure([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line"></span><br><span class="line">otherClosure([<span class="number">0</span>])</span><br><span class="line">optimizedOtherClosure([<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<p>These functions might seem work differently but short form of closures are just optimized so they return same value.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/14-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/14-Swift-Task/" class="post-title-link" itemprop="url">14 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-14 20:30:47" itemprop="dateCreated datePublished" datetime="2019-11-14T20:30:47+09:00">2019-11-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:21:25" itemprop="dateModified" datetime="2019-12-03T19:21:25+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Optional-Enum"><a href="#Optional-Enum" class="headerlink" title="Optional, Enum"></a>Optional, Enum</h1><br>
+
+<br>
+
+<h3 id="Combine-Optional-Strings-and-return-a-non-Optional-String"><a href="#Combine-Optional-Strings-and-return-a-non-Optional-String" class="headerlink" title="Combine Optional Strings and return a non Optional String"></a>Combine Optional Strings and return a non Optional String</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">combineStrings</span><span class="params">(str1: String?, str2: String?, str3: String?)</span></span> -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    (str1 ?? <span class="string">""</span>) + (str2 ?? <span class="string">""</span>) + (str3 ?? <span class="string">""</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">combineStrings(str1: <span class="string">"AB"</span>, str2: <span class="string">"CD"</span>, str3: <span class="string">"EF"</span>)</span><br><span class="line"><span class="comment">// "ABCDEF"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Calculate-using-enumeration"><a href="#Calculate-using-enumeration" class="headerlink" title="Calculate using enumeration"></a>Calculate using enumeration</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Arithmetic</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> addition, subtraction, multiplication, division</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">calculate</span><span class="params">(<span class="number">_</span> firstNumber: Double, <span class="number">_</span> secondNumber: Double)</span></span> -&gt; <span class="type">Double</span> &#123;</span><br><span class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> .addition:</span><br><span class="line">            <span class="keyword">return</span> firstNumber + secondNumber</span><br><span class="line">        <span class="keyword">case</span> .subtraction:</span><br><span class="line">            <span class="keyword">return</span> firstNumber - secondNumber</span><br><span class="line">        <span class="keyword">case</span> .multiplication:</span><br><span class="line">            <span class="keyword">return</span> firstNumber * secondNumber</span><br><span class="line">        <span class="keyword">case</span> .division:</span><br><span class="line">            <span class="keyword">return</span> firstNumber / secondNumber</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">Arithmetic</span>.addition.calculate(<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// 15</span></span><br><span class="line"></span><br><span class="line"><span class="type">Arithmetic</span>.subtraction.calculate(<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="type">Arithmetic</span>.multiplication.calculate(<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// 50</span></span><br><span class="line"></span><br><span class="line"><span class="type">Arithmetic</span>.division.calculate(<span class="number">10</span>, <span class="number">5</span>)</span><br><span class="line"><span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Convert-celcius-to-fahrenheit-and-kelvin-using-enumertaion"><a href="#Convert-celcius-to-fahrenheit-and-kelvin-using-enumertaion" class="headerlink" title="Convert celcius to fahrenheit and kelvin using enumertaion"></a>Convert celcius to fahrenheit and kelvin using enumertaion</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Temperature</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> celcius(<span class="type">Double</span>), fahrenheit(<span class="type">Double</span>), kelvin(<span class="type">Double</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">toCelcius</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123;</span><br><span class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> .celcius(<span class="keyword">let</span> celcius):</span><br><span class="line">            <span class="keyword">return</span> celcius</span><br><span class="line">        <span class="keyword">case</span> .fahrenheit(<span class="keyword">let</span> fahrenheit):</span><br><span class="line">            <span class="keyword">return</span> (fahrenheit - <span class="number">32</span>) * <span class="number">5</span> / <span class="number">9</span></span><br><span class="line">        <span class="keyword">case</span> .kelvin(<span class="keyword">let</span> kelvin):</span><br><span class="line">            <span class="keyword">return</span> kelvin + <span class="number">273</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">Temperature</span>.celcius(<span class="number">100</span>).toCelcius()</span><br><span class="line"><span class="comment">// 100</span></span><br><span class="line"></span><br><span class="line"><span class="type">Temperature</span>.fahrenheit(<span class="number">100</span>).toCelcius()</span><br><span class="line"><span class="comment">// 37.77777777777778</span></span><br><span class="line"></span><br><span class="line"><span class="type">Temperature</span>.kelvin(<span class="number">100</span>).toCelcius()</span><br><span class="line"><span class="comment">// 373</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Calculate-using-enumeration-and-recursive-call"><a href="#Calculate-using-enumeration-and-recursive-call" class="headerlink" title="Calculate using enumeration and recursive call"></a>Calculate using enumeration and recursive call</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">indirect</span> <span class="class"><span class="keyword">enum</span> <span class="title">ArithmeticExpression</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> number(<span class="type">Int</span>)</span><br><span class="line">  <span class="keyword">case</span> addition(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">  <span class="keyword">case</span> multiplication(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> five = <span class="type">ArithmeticExpression</span>.number(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">let</span> four = <span class="type">ArithmeticExpression</span>.number(<span class="number">4</span>)</span><br><span class="line"><span class="keyword">let</span> sum = <span class="type">ArithmeticExpression</span>.addition(five, four)</span><br><span class="line"><span class="keyword">let</span> product = <span class="type">ArithmeticExpression</span>.multiplication(sum, <span class="type">ArithmeticExpression</span>.number(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">evaluate</span><span class="params">(<span class="number">_</span> expression: ArithmeticExpression)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> expression &#123;</span><br><span class="line">    <span class="keyword">case</span> .number(<span class="keyword">let</span> number):</span><br><span class="line">        <span class="keyword">return</span> number</span><br><span class="line">    <span class="keyword">case</span> .addition(<span class="keyword">let</span> firstNumber, <span class="keyword">let</span> secondNumber):</span><br><span class="line">        <span class="keyword">return</span> evaluate(firstNumber) + evaluate(secondNumber)</span><br><span class="line">    <span class="keyword">case</span> .multiplication(<span class="keyword">let</span> firstNumber, <span class="keyword">let</span> secondNumber):</span><br><span class="line">        <span class="keyword">return</span> evaluate(firstNumber) * evaluate(secondNumber)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">evaluate(five)</span><br><span class="line"><span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line">evaluate(sum)</span><br><span class="line"><span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line">evaluate(product)</span><br><span class="line"><span class="comment">// 18</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/13-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/13-Swift-Task/" class="post-title-link" itemprop="url">13 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-13 22:06:45" itemprop="dateCreated datePublished" datetime="2019-11-13T22:06:45+09:00">2019-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:20:52" itemprop="dateModified" datetime="2019-12-03T19:20:52+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Collection-Types-Array-Dictionary-Set"><a href="#Collection-Types-Array-Dictionary-Set" class="headerlink" title="Collection Types (Array, Dictionary, Set)"></a>Collection Types (Array, Dictionary, Set)</h1><br>
+
+<br>
+
+<h3 id="Return-the-array-of-people-that-has-“E”-in-their-favorite-fruits"><a href="#Return-the-array-of-people-that-has-“E”-in-their-favorite-fruits" class="headerlink" title="Return the array of people that has “E” in their favorite fruits"></a>Return the array of people that has “E” in their favorite fruits</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> appleLeadershipAndTheirFavoriteFruits = [</span><br><span class="line">					     <span class="string">"Steve Jobs"</span>        : <span class="string">"Apple"</span>,</span><br><span class="line">                                             <span class="string">"Steve Wozniak"</span>     : <span class="string">"Pineapple"</span>,</span><br><span class="line">                                             <span class="string">"Jonathan Ive"</span>      : <span class="string">"Kiwi"</span>,</span><br><span class="line">                                             <span class="string">"Philip W. Schiller"</span>: <span class="string">"Mango"</span>,</span><br><span class="line">                                             <span class="string">"Craig Federighi"</span>   : <span class="string">"Fig"</span>,</span><br><span class="line">                                             <span class="string">"Chris Lattner"</span>     : <span class="string">"Avocado"</span>,</span><br><span class="line">                                             <span class="string">"Jeff Williams"</span>     : <span class="string">"Raspberry"</span>,</span><br><span class="line">                                            ]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getlistOfHasE</span><span class="params">(<span class="keyword">in</span> list: Dictionary&lt;String, String&gt;)</span></span> -&gt; <span class="type">Array</span>&lt;<span class="type">String</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> listOfPeopleHasEInTheirFavoriteFruit = <span class="type">Array</span>&lt;<span class="type">String</span>&gt;()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (person, fruit) <span class="keyword">in</span> list &#123;</span><br><span class="line">        <span class="keyword">let</span> hasE = fruit.lowercased().<span class="built_in">contains</span>(<span class="string">"e"</span>) ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">      	</span><br><span class="line">        <span class="keyword">if</span> hasE &#123;</span><br><span class="line">            listOfPeopleHasEInTheirFavoriteFruit.append(person)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> listOfPeopleHasEInTheirFavoriteFruit</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getlistOfHasE(<span class="keyword">in</span>: appleLeadershipAndTheirFavoriteFruits)</span><br><span class="line"><span class="comment">// ["Steve Jobs", "Steve Wozniak", "Jeff Williams"]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h3 id="Sort-the-array-odd-numbers-go-to-forward-and-even-numbers-go-to-Backward"><a href="#Sort-the-array-odd-numbers-go-to-forward-and-even-numbers-go-to-Backward" class="headerlink" title="Sort the array odd numbers go to forward and even numbers go to Backward"></a>Sort the array odd numbers go to forward and even numbers go to Backward</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">oddGoToForwardEvenGoToBackward</span><span class="params">(numbers: Array&lt;Int&gt;)</span></span> -&gt; <span class="type">Array</span>&lt;<span class="type">Int</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> odds = <span class="type">Array</span>&lt;<span class="type">Int</span>&gt;()</span><br><span class="line">    <span class="keyword">var</span> evens = <span class="type">Array</span>&lt;<span class="type">Int</span>&gt;()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</span><br><span class="line">        <span class="keyword">let</span> isOdd = number % <span class="number">2</span> == <span class="number">1</span> ? <span class="literal">true</span> : <span class="literal">false</span></span><br><span class="line">        </span><br><span class="line">        isOdd ? odds.append(number) : evens.append(number)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> odds + evens</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">oddGoToForwardEvenGoToBackward(numbers: [<span class="number">2</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>])</span><br><span class="line"><span class="comment">// [7, 1, 3, 2, 8, 4]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h3 id="Print-how-many-digit-numbers-are-in-array"><a href="#Print-how-many-digit-numbers-are-in-array" class="headerlink" title="Print how many digit numbers are in array"></a>Print how many digit numbers are in array</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">howManyNumbers</span><span class="params">(<span class="keyword">in</span> numbers: Array&lt;Int&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> numberCounts = <span class="type">Dictionary</span>&lt;<span class="type">Int</span>, <span class="type">Int</span>&gt;()</span><br><span class="line">    <span class="keyword">var</span> countedNumbers = <span class="type">Array</span>&lt;<span class="type">Int</span>&gt;()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> ... <span class="number">9</span> &#123;</span><br><span class="line">        numberCounts[i] = <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</span><br><span class="line">        <span class="keyword">for</span> compareNumber <span class="keyword">in</span> <span class="number">0</span> ... <span class="number">9</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> number == compareNumber &#123;</span><br><span class="line">                numberCounts[number]! += <span class="number">1</span></span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span> !countedNumbers.<span class="built_in">contains</span>(number) &#123; countedNumbers.append(number) &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> result = <span class="type">String</span>()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> countedNumber <span class="keyword">in</span> countedNumbers &#123;</span><br><span class="line">        result += <span class="string">"Number \(countedNumber) : Counts \(numberCounts[countedNumber]!), "</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    result = <span class="type">String</span>(result.<span class="built_in">dropLast</span>(<span class="number">2</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(result)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">howManyNumbers(<span class="keyword">in</span>: [<span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">8</span>])</span><br><span class="line"><span class="comment">// "Number 1 : Counts 1, Number 3 : Counts 3, Number 8 : Counts 1"</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h3 id="Reverse-a-number"><a href="#Reverse-a-number" class="headerlink" title="Reverse a number"></a>Reverse a number</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reverseNumber</span><span class="params">(of number: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> reversedNumber = <span class="type">String</span>()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> chr <span class="keyword">in</span> <span class="type">String</span>(number).reversed() &#123;</span><br><span class="line">        reversedNumber += <span class="type">String</span>(chr)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="type">Int</span>(reversedNumber)!</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">reverseNumber(of: <span class="number">123</span>)</span><br><span class="line"><span class="comment">// 321</span></span><br><span class="line"></span><br><span class="line">reverseNumber(of: <span class="number">400000</span>)</span><br><span class="line"><span class="comment">// 4</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h3 id="Determine-the-number-has-unique-digits-or-not"><a href="#Determine-the-number-has-unique-digits-or-not" class="headerlink" title="Determine the number has unique digits or not"></a>Determine the number has unique digits or not</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isUniqueDigit</span><span class="params">(number: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> characterArray = <span class="type">Array</span>&lt;<span class="type">Character</span>&gt;()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> chr <span class="keyword">in</span> <span class="type">String</span>(number) &#123;</span><br><span class="line">        characterArray.append(chr)</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> characterArray.<span class="built_in">count</span> == <span class="type">Array</span>(<span class="type">Set</span>(characterArray)).<span class="built_in">count</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">isUniqueDigit(number: <span class="number">123456789</span>)</span><br><span class="line"><span class="comment">// ture</span></span><br><span class="line"></span><br><span class="line">isUniqueDigit(number: <span class="number">111111111</span>)</span><br><span class="line"><span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h3 id="Determine-the-array-has-unique-letters-or-not"><a href="#Determine-the-array-has-unique-letters-or-not" class="headerlink" title="Determine the array has unique letters or not"></a>Determine the array has unique letters or not</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getUniqueLetters</span><span class="params">(from letter: Array&lt;String&gt;)</span></span> -&gt; <span class="type">Array</span>&lt;<span class="type">String</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> uniqueLetters = <span class="type">Array</span>&lt;<span class="type">String</span>&gt;()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> letter &#123;</span><br><span class="line">        <span class="keyword">var</span> <span class="built_in">count</span> = <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> letter &#123;</span><br><span class="line">            <span class="keyword">if</span> i == j &#123;</span><br><span class="line">                <span class="built_in">count</span> += <span class="number">1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">count</span> == <span class="number">1</span> &#123;</span><br><span class="line">            uniqueLetters.append(i)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> uniqueLetters</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getUniqueLetters(from: [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"a"</span>, <span class="string">"e"</span>, <span class="string">"d"</span>, <span class="string">"c"</span>])</span><br><span class="line"><span class="comment">// ["b", "e", "d"]</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+<h3 id="Organize-a-carnivores-phylogeny"><a href="#Organize-a-carnivores-phylogeny" class="headerlink" title="Organize a carnivores phylogeny"></a>Organize a carnivores phylogeny</h3><p><img src="/2019/11/13-Swift-Task/phylogeny.png" alt="phylogney"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> livingThings = [</span><br><span class="line">    <span class="string">"Carnivores"</span>: [</span><br><span class="line">        <span class="string">"Canidae"</span>: [</span><br><span class="line">            <span class="string">"Canini"</span>: [</span><br><span class="line">                <span class="string">"Canina"</span>,</span><br><span class="line">                <span class="string">"Cerdocyonina"</span>,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">"Urocyon"</span>: [</span><br><span class="line">                <span class="string">"Urocyon littoralis"</span>,</span><br><span class="line">                <span class="string">"Urocyon cinereroargenteus"</span>,</span><br><span class="line">            ],</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">"Felidae"</span>: [</span><br><span class="line">            <span class="string">"Pantherinae"</span>: [</span><br><span class="line">                <span class="string">"Neofelis"</span>,</span><br><span class="line">                <span class="string">"Panthera"</span>,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">"Felinae"</span>: [</span><br><span class="line">                <span class="string">"Pardofelis"</span>,</span><br><span class="line">                <span class="string">"Catopuma"</span>,</span><br><span class="line">            ],</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(livingThings[<span class="string">"Carnivores"</span>]![<span class="string">"Felidae"</span>]![<span class="string">"Felinae"</span>]!)</span><br><span class="line"><span class="comment">// ["Pardofelis", "Catopuma"]</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://martinolee.github.io/2019/11/11-Swift-Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="martinolee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Swift Developer's Home">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/11-Swift-Task/" class="post-title-link" itemprop="url">11 Swift Task</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-11-12 18:33:43" itemprop="dateCreated datePublished" datetime="2019-11-12T18:33:43+09:00">2019-11-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-12-03 19:20:20" itemprop="dateModified" datetime="2019-12-03T19:20:20+09:00">2019-12-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/swift/" itemprop="url" rel="index">
+                    <span itemprop="name">swift</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Get-two-natural-number-and-combine-them-into-one-number"><a href="#Get-two-natural-number-and-combine-them-into-one-number" class="headerlink" title="Get two natural number and combine them into one number"></a>Get two natural number and combine them into one number</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">stickTwoNaturalNumbers</span><span class="params">(firstNumber: Int, secondNumber: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="type">Int</span>(<span class="type">String</span>(firstNumber) + <span class="type">String</span>(secondNumber))!</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">stickTwoNaturalNumbers(firstNumber: <span class="number">12</span>, secondNumber: <span class="number">34</span>)</span><br><span class="line"><span class="comment">// 1234</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Compare-two-strings-are-the-same-or-not"><a href="#Compare-two-strings-are-the-same-or-not" class="headerlink" title="Compare two strings are the same or not"></a>Compare two strings are the same or not</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isSameLetter</span><span class="params">(firstLetter: String, secondLetter: String)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    firstLetter == secondLetter</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">isSameLetter(firstLetter: <span class="string">"a"</span>, secondLetter: <span class="string">"a"</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">isSameLetter(firstLetter: <span class="string">"a"</span>, secondLetter: <span class="string">"b"</span>)</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Print-every-factors-of-input-number"><a href="#Print-every-factors-of-input-number" class="headerlink" title="Print every factors of input number"></a>Print every factors of input number</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printDivisor</span><span class="params">(of number: Int)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...number &#123;</span><br><span class="line">        <span class="keyword">if</span> number % i == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="built_in">print</span>(i, terminator: <span class="string">" "</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printDivisor(of: <span class="number">10</span>)</span><br><span class="line"><span class="comment">// 1 2 5 10</span></span><br><span class="line"></span><br><span class="line">printDivisor(of: <span class="number">100</span>)</span><br><span class="line"><span class="comment">// 1 2 4 5 10 20 25 50 100</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Print-every-common-multiple-of-three-and-five-below-one-hundred"><a href="#Print-every-common-multiple-of-three-and-five-below-one-hundred" class="headerlink" title="Print every common multiple of three and five below one hundred"></a>Print every common multiple of three and five below one hundred</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printCommonMultipleOfThreeAndFive</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...<span class="number">100</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">0</span>) &amp;&amp; (i % <span class="number">5</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">print</span>(i, terminator: <span class="string">" "</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printCommonMultipleOfThreeAndFive()</span><br><span class="line"><span class="comment">// 15 30 45 60 75 90</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Determine-the-number-that-is-prime-number-or-not"><a href="#Determine-the-number-that-is-prime-number-or-not" class="headerlink" title="Determine the number that is prime number or not"></a>Determine the number that is prime number or not</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isPrime</span><span class="params">(number: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">2</span>..&lt;number &#123;</span><br><span class="line">        <span class="keyword">if</span> number % i == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">isPrime(number: <span class="number">7919</span>)</span><br><span class="line"><span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">isPrime(number: <span class="number">34573245731123</span>)</span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Gets-a-natural-number-and-returns-the-number-in-the-order-of-the-number-in-the-Fibonacci-sequence"><a href="#Gets-a-natural-number-and-returns-the-number-in-the-order-of-the-number-in-the-Fibonacci-sequence" class="headerlink" title="Gets a natural number and returns the number in the order of the number in the Fibonacci sequence"></a>Gets a natural number and returns the number in the order of the number in the Fibonacci sequence</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">getFibonacciNumber</span><span class="params">(of number: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> fibonacciNumbers = <span class="type">Array</span>(repeating: <span class="number">0</span>, <span class="built_in">count</span>: number)</span><br><span class="line">    </span><br><span class="line">    fibonacciNumbers.insert(<span class="number">0</span>, at: <span class="number">0</span>)</span><br><span class="line">    fibonacciNumbers.insert(<span class="number">1</span>, at: <span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">2</span>..&lt;fibonacciNumbers.<span class="built_in">count</span> &#123;</span><br><span class="line">        fibonacciNumbers[i] = fibonacciNumbers[i - <span class="number">2</span>] + fibonacciNumbers[i - <span class="number">1</span>]</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> fibonacciNumbers[number - <span class="number">1</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getFibonacciNumber(of: <span class="number">4</span>)</span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line">getFibonacciNumber(of: <span class="number">30</span>)</span><br><span class="line"><span class="comment">// 514229</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="Determine-the-year-that-is-leap-year-or-not"><a href="#Determine-the-year-that-is-leap-year-or-not" class="headerlink" title="Determine the year that is leap year or not"></a>Determine the year that is leap year or not</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">isLeapYear</span><span class="params">(<span class="number">_</span> year: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> year % <span class="number">4</span> == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> year % <span class="number">100</span> == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> year % <span class="number">400</span> == <span class="number">0</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">isLeapYear(<span class="number">200</span>)</span><br><span class="line"><span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">isLeapYear(<span class="number">2016</span>)</span><br><span class="line"><span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">martinolee</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Instagram" href="https://www.instagram.com/soohan_lee" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-instagram"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" href="https://github.com/martinolee" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
 </div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/martinolee" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;martinolee" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/soohan_lee" title="Instagram &amp;rarr; https:&#x2F;&#x2F;instagram.com&#x2F;soohan_lee" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+  </div>
 
 
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© martinolee | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+
+      </div>
+
     </div>
-</footer>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-    </div>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">martinolee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
